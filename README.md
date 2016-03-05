@@ -1,2 +1,2 @@
-# clientProject
-Website development for a client as a Job Position Test
+# Client Project
+Website development for a client (Job Position Test)
