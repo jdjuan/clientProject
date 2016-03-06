@@ -4,12 +4,18 @@
 @import "compass/utilities";
 @import "include-media";
 
-.section{
-	@include center-aligner();
+* {
+	font-family: 'Raleway', sans-serif !important;
 }
 
-.red{
+.section{
+	@include center-aligner();
+	
+}
+
+.redBG{
 	@include section($red);
+	width: 100vw;
 	display:table-cell;
 	.sectionTop{
 		display: table-cell;
@@ -27,7 +33,7 @@
 	}
 }
 
-.lightGray{
+.lightGrayBG{
 	@include section($lightGray);
 	.sectionTop{
 		display: inline-block;
@@ -45,7 +51,16 @@
 			height: 55vh;
 		}
 	}
-	
+}
+
+.whiteBG{
+	@include section($white);
+	.sectionTop{
+		height: 75vh;
+	}
+	.sectionBottom{
+		margin-top: 7rem;
+	}
 }
 
 .imageCenter{
@@ -53,7 +68,7 @@
 }
 
 .logoSubtitle{
-	@include font-style($white, 2rem, 400);
+	@include font-style($lightGray, 2rem, 400);
 	letter-spacing: 1px;
 	line-height: 128%;
 	margin-top: 10vh;
@@ -118,11 +133,11 @@ strong{
 	height: 5rem;
 	border-style: solid;
 	border-width: 2px;
-	border-color: $white;
+	border-color: $lightGray;
 	cursor: pointer;
 	margin-left: auto;//ie
 	margin-right: auto;//ie
-	@include box-shadow($darkGray 1px 1px 8px);
+	@include box-shadow($darkGray 1px 1px 20px -5px);
 	&:active{
 		@include box-shadow($darkGray 0px 0px 0px);
 	}
@@ -139,5 +154,77 @@ strong{
 	}
 	@include media("<=small"){
 		margin-top: 11vh;
+	}
+}
+
+.blackButton{
+	border-color: $darkGray;
+	border-width: 2.5px;
+	width: 4.8rem;
+	height: 4.8rem;
+	margin-top: 5vh;
+}
+
+.titleWithMargin{
+	@include font-style($darkGray, 6.3rem, 400);
+	margin-top: 0;
+	padding-top: 4rem;
+	margin-bottom: 10.5rem;
+	@include media("<=circlesColliding"){
+		margin-bottom: 3rem;
+	}
+}
+
+.servicesContainer{
+	width: 77vw;
+	margin-left: auto;//ie
+	margin-right: auto;//ie
+	@include media("<=993px"){
+		width: 90vw;
+	}
+	@include media("<=circlesColliding"){
+		text-align: left;
+	}
+}
+
+.circle{
+	@include border-radius(25vh);
+	width: 14vw;
+	height: 14vw;
+	@include media("<=circlesColliding"){
+		width: 12vh;
+		height: 12vh;
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 2rem;
+	}
+}
+
+.service1{
+	background: $red url("../images/service1.png") no-repeat center/44%;
+}
+.service2{
+	background: $red url("../images/service2.png") no-repeat center/44%;
+}
+.service3{
+	background: $red url("../images/service3.png") no-repeat center/44%;
+}
+.service4{
+	background: $red url("../images/service4.png") no-repeat center/44%;
+}
+
+.circleSubtitle{
+	@include font-style($darkGray, 2rem, 500);
+	@include opacity(0.8);
+	margin-top: 5rem;
+	@include media("<=circlesColliding"){
+		margin-top: 2rem;
+		display: inline-block;
+		vertical-align: super;
+		margin-left: 2.5rem;
+	}
+	@include media("<=360px"){
+		margin-left: 0.5rem;
+		@include font-style($darkGray, 1.7rem, 500);
 	}
 }

@@ -4,7 +4,6 @@
 }
 
 @mixin font-style($color, $fontSize, $fontWeight){
-  font-family: 'Raleway';
   color: $color;
   font-size: $fontSize;
   font-weight: $fontWeight;
