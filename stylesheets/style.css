@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800);
-/* line 6, ../sass/style.scss */
+/* line 7, ../sass/style.scss */
 .section {
   text-align: center;
   text-align: -moz-center;
@@ -8,12 +8,11 @@
   margin-right: auto;
 }
 
-/* line 10, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 .red {
   background-color: #D83454;
   height: 100vh;
   display: table-cell;
-  width: 100vw;
 }
 /* line 14, ../sass/style.scss */
 .red .sectionTop {
@@ -45,8 +44,7 @@
 }
 /* line 32, ../sass/style.scss */
 .lightGray .sectionTop {
-  display: table-cell;
-  vertical-align: middle;
+  display: inline-block;
   height: 75vh;
 }
 @media (max-width: 1100px) {
@@ -74,12 +72,12 @@
   }
 }
 
-/* line 52, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 .imageCenter {
   width: 40vh;
 }
 
-/* line 56, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 .logoSubtitle {
   font-family: 'Raleway';
   color: #FAEFF1;
@@ -92,64 +90,72 @@
   margin-right: 30vw;
 }
 @media (max-width: 1100px) {
-  /* line 56, ../sass/style.scss */
+  /* line 55, ../sass/style.scss */
   .logoSubtitle {
     margin-left: 25vw;
     margin-right: 25vw;
   }
 }
 @media (max-width: 900px) {
-  /* line 56, ../sass/style.scss */
+  /* line 55, ../sass/style.scss */
   .logoSubtitle {
     margin-left: 20vw;
     margin-right: 20vw;
   }
 }
 @media (max-width: 740px) {
-  /* line 56, ../sass/style.scss */
+  /* line 55, ../sass/style.scss */
   .logoSubtitle {
     margin-left: 15vw;
     margin-right: 15vw;
   }
 }
 @media (max-width: 590px) {
-  /* line 56, ../sass/style.scss */
+  /* line 55, ../sass/style.scss */
   .logoSubtitle {
     margin-left: 8vw;
     margin-right: 8vw;
   }
 }
 
-/* line 81, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 .drawing {
-  width: 35vw;
+  width: 75vh;
+  margin-top: 9vw;
 }
-@media (max-width: 1100px) {
-  /* line 81, ../sass/style.scss */
+@media (max-width: 1100px) and (orientation: portrait) {
+  /* line 80, ../sass/style.scss */
   .drawing {
-    width: 45vw;
-  }
-}
-@media (max-width: 900px) {
-  /* line 81, ../sass/style.scss */
-  .drawing {
-    width: 60vw;
-  }
-}
-@media (max-width: 740px) {
-  /* line 81, ../sass/style.scss */
-  .drawing {
-    width: 70vw;
-  }
-}
-@media (max-width: 590px) {
-  /* line 81, ../sass/style.scss */
-  .drawing {
-    width: 80vw;
+    width: 35vh;
+    margin-top: 11vw;
   }
 }
 
-/* line 97, ../sass/style.scss */
+@media (max-width: 900px) and (orientation: portrait) {
+  /* line 80, ../sass/style.scss */
+  .drawing {
+    width: 40vh;
+    margin-top: 13vw;
+  }
+}
+
+@media (max-width: 740px) and (orientation: portrait) {
+  /* line 80, ../sass/style.scss */
+  .drawing {
+    width: 60vh;
+    margin-top: 15vw;
+  }
+}
+
+@media (max-width: 590px) and (orientation: portrait) {
+  /* line 80, ../sass/style.scss */
+  .drawing {
+    width: 40vh;
+    margin-top: 17vw;
+  }
+}
+
+/* line 101, ../sass/style.scss */
 .drawingSubtitle {
   font-family: 'Raleway';
   color: #434244;
@@ -160,13 +166,13 @@
   margin-right: 10vw;
 }
 
-/* line 104, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 strong {
   font-weight: normal;
   color: #D83454;
 }
 
-/* line 109, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
 .scrollButton {
   -moz-border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -178,13 +184,22 @@ strong {
   border-style: solid;
   border-width: 2px;
   border-color: #FAEFF1;
-}
-
-/* line 120, ../sass/style.scss */
-.redButton {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
   -moz-box-shadow: #434244 1px 1px 8px;
   -webkit-box-shadow: #434244 1px 1px 8px;
   box-shadow: #434244 1px 1px 8px;
+}
+/* line 126, ../sass/style.scss */
+.scrollButton:active {
+  -moz-box-shadow: #434244 0px 0px 0px;
+  -webkit-box-shadow: #434244 0px 0px 0px;
+  box-shadow: #434244 0px 0px 0px;
+}
+
+/* line 131, ../sass/style.scss */
+.redButton {
   background-color: #D83454;
   border-width: 3px;
   width: 4.8rem;
@@ -192,13 +207,13 @@ strong {
   margin-top: 5vh;
 }
 @media (max-width: 900px) {
-  /* line 120, ../sass/style.scss */
+  /* line 131, ../sass/style.scss */
   .redButton {
     margin-top: 6vh;
   }
 }
 @media (max-width: 740px) {
-  /* line 120, ../sass/style.scss */
+  /* line 131, ../sass/style.scss */
   .redButton {
     margin-top: 11vh;
   }

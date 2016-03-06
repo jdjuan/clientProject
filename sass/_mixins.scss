@@ -23,27 +23,3 @@
   text-align: -moz-right;
   text-align: -webkit-right;
 }
-
-@mixin very-small {
-  @media (max-width: #{$super-small-width}) {
-    @content;
-  }
-}
-
-@mixin small {
-  @media (max-width: #{$small-width}) {
-    @content;
-  }
-}
-
-@mixin medium {
-  @media (max-width: #{$medium-width}) {
-    @content;
-  }
-}
-
-@mixin large {
-  @media (max-width: #{$large-width}) {
-    @content;
-  }
-}

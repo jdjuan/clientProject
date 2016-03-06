@@ -1,13 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800);
 
+$breakpoints: (very-small: 590px, small: 740px, medium: 900px, large: 1100px);
+
 $white: #FAEFF1;
-// $white: #FFF;
 $red : #D83454;
 $darkGray : #434244;
 $lightGray : #F1F2F2;
 $gray : #CBCBCB;
 $fontSize : 5.5vw;
-$super-small-width: 590px;
-$small-width: 740px;
-$medium-width: 900px;
-$large-width: 1100px;

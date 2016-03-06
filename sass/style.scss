@@ -2,6 +2,7 @@
 @import 'mixins'; 
 @import "compass/css3";
 @import "compass/utilities";
+@import "include-media";
 
 .section{
 	@include center-aligner();
@@ -10,7 +11,6 @@
 .red{
 	@include section($red);
 	display:table-cell;
-	width: 100vw;
 	.sectionTop{
 		display: table-cell;
 		vertical-align: bottom;
@@ -18,10 +18,10 @@
 	}
 	.sectionBottom{
 		margin-top: 10vh;
-		@include medium{
+		@include media("<=medium"){
 			margin-top: 8vh;
 		}
-		@include small{
+		@include media("<=small"){
 			margin-top: 6vh;
 		}
 	}
@@ -30,19 +30,18 @@
 .lightGray{
 	@include section($lightGray);
 	.sectionTop{
-		display: table-cell;
-		vertical-align: middle;
+		display: inline-block;
 		height: 75vh;
-		@include large{
+		@include media("<=large"){
 			height: 70vh;
 		}
-		@include medium{
+		@include media("<=medium"){
 			height: 65vh;
 		}
-		@include small{
+		@include media("<=small"){
 			height: 60vh;
 		}
-		@include very-small{
+		@include media("<=very-small"){
 			height: 55vh;
 		}
 	}
@@ -60,37 +59,42 @@
 	margin-top: 10vh;
 	margin-left: 30vw;
 	margin-right: 30vw;
-	@include large{
+	@include media("<=large"){
 		margin-left: 25vw;
 		margin-right: 25vw;
 	}
-	@include medium{
+	@include media("<=medium"){
 		margin-left: 20vw;
 		margin-right: 20vw;
 	}
-	@include small{
+	@include media("<=small"){
 		margin-left: 15vw;
 		margin-right: 15vw;
 	}
-	@include very-small{
+	@include media("<=very-small"){
 		margin-left: 8vw;
 		margin-right: 8vw;
 	}
 }
 
 .drawing{
-	width: 35vw;
-	@include large{
-		width: 45vw;
+	width: 75vh;
+	margin-top: 9vw;
+	@include media("<=large","portrait"){
+		width: 35vh;
+		margin-top: 11vw;
 	}
-	@include medium{
-		width: 60vw;
+	@include media("<=medium","portrait"){
+		width: 40vh;
+		margin-top: 13vw;
 	}
-	@include small{
-		width: 70vw;
+	@include media("<=small","portrait"){
+		width: 60vh;
+		margin-top: 15vw;
 	}
-	@include very-small{
-		width: 80vw;
+	@include media("<=very-small","portrait"){
+		width: 40vh;
+		margin-top: 17vw;
 	}
 }
 
@@ -115,19 +119,25 @@ strong{
 	border-style: solid;
 	border-width: 2px;
 	border-color: $white;
+	cursor: pointer;
+	margin-left: auto;//ie
+	margin-right: auto;//ie
+	@include box-shadow($darkGray 1px 1px 8px);
+	&:active{
+		@include box-shadow($darkGray 0px 0px 0px);
+	}
 }
 
 .redButton{
-	@include box-shadow($darkGray 1px 1px 8px);
 	background-color: $red;
 	border-width: 3px;
 	width: 4.8rem;
 	height: 4.8rem;
 	margin-top: 5vh;
-	@include medium{
+	@include media("<=medium"){
 		margin-top: 6vh;
 	}
-	@include small{
+	@include media("<=small"){
 		margin-top: 11vh;
 	}
 }
