@@ -1,0 +1,120 @@
+@import 'variables'; 
+@import 'mixins'; 
+@import "compass/css3";
+@import "compass/utilities";
+
+.section{
+	@include center-aligner();
+}
+
+.red{
+	@include section($red);
+	display:table-cell;
+	width: 100vw;
+	.sectionTop{
+		display: table-cell;
+		vertical-align: bottom;
+		height: 75vh;
+	}
+	.sectionBottom{
+		margin-top: 10vh;
+		@include medium{
+			margin-top: 8vh;
+		}
+		@include small{
+			margin-top: 6vh;
+		}
+	}
+}
+
+.lightGray{
+	@include section($lightGray);
+	.sectionTop{
+		display: table-cell;
+		vertical-align: middle;
+		height: 75vh;
+		@include large{
+			height: 70vh;
+		}
+		@include medium{
+			height: 65vh;
+		}
+		@include small{
+			height: 60vh;
+		}
+		@include very-small{
+			height: 55vh;
+		}
+	}
+	
+}
+
+.imageCenter{
+	width: 40vh;
+}
+
+.drawing{
+	width: 35vw;
+	@include large{
+		width: 45vw;
+	}
+	@include medium{
+		width: 60vw;
+	}
+	@include small{
+		width: 70vw;
+	}
+	@include very-small{
+		width: 80vw;
+	}
+}
+
+.logoSubtitle{
+	@include font-style($white, 2rem, 400);
+	letter-spacing: 1px;
+	line-height: 128%;
+	margin-top: 10vh;
+	margin-left: 30vw;
+	margin-right: 30vw;
+	@include large{
+		margin-left: 25vw;
+		margin-right: 25vw;
+	}
+	@include medium{
+		margin-left: 20vw;
+		margin-right: 20vw;
+	}
+	@include small{
+		margin-left: 15vw;
+		margin-right: 15vw;
+	}
+	@include very-small{
+		margin-left: 8vw;
+		margin-right: 8vw;
+	}
+}
+
+.drawingSubtitle{
+	@include font-style($darkGray, 2.9rem, 400);
+	letter-spacing: 0.4px;
+}
+
+.scrollButton{
+	@include border-radius(25px);
+	background: url("../images/arrowDown.png") no-repeat center;
+	background-size: 35%;
+	width: 5rem;
+	height: 5rem;
+	border-style: solid;
+	border-width: 2px;
+	border-color: $white;
+}
+
+.redButton{
+	@include box-shadow($darkGray 1px 1px 6px);
+	background-color: $red;
+	border-width: 3px;
+	width: 4.8rem;
+	height: 4.8rem;
+	margin-top: 4vh;
+}
