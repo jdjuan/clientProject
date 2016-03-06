@@ -26,6 +26,8 @@
 	<script src="owl-carousel/owl.carousel.js"></script>
 	<!-- Custom Javascript -->
 	<script src="javascripts/main.js"></script>
+	<!-- Google Maps API -->
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 </head>
 <body>
 	<div class="section firstType" id="section1">
@@ -101,7 +103,18 @@
 			</div>
 		</div>
 		<div class="sectionBottom">
-			<div class="scrollButton blackButton"></div>
+			<div class="scrollButton blackButton" role="section7"></div>
+		</div>
+	</div>
+	<div class="section fourthType" id="section7">
+		<div class="sectionTop">
+			<h1 class="titleWithoutMargin" id="mapTitle"></h1>
+			<div class="map-container">
+				<div id="map"></div>
+			</div>
+		</div>
+		<div class="sectionBottom">
+			<div class="scrollButton redButton" role="section8"></div>
 		</div>
 	</div>
 </body>

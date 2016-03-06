@@ -65,10 +65,8 @@
 }
 
 .fourthType{
+	@extend .thirdType;
 	@include section($lightGray);
-	.sectionTop{
-		height: 75vh;
-	}
 }
 
 .imageCenter{
@@ -180,6 +178,10 @@ strong{
 	@include media("<=circlesColliding"){
 		margin-bottom: 3rem;
 	}
+}
+.titleWithoutMargin{
+	@extend .titleWithMargin;
+	margin-bottom: 3rem;
 }
 
 .servicesContainer{
@@ -297,4 +299,55 @@ strong{
 .owl-next {
 	@extend .owl-prev;
 	float: right;
+}
+
+#mapTitle:before{
+	content: "How to find us";
+	@include media("<=very-small"){
+		content: "Find us";
+	}
+}
+
+.map-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 55vh;
+}
+.map-container:before, .map-container:after, #map:before, #map:after {
+	position: absolute;
+	display: block;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+	content: '';
+	z-index: 5;
+}
+.map-container:before {
+	top: -5px;
+	left: 0;
+	right: 0;
+	height: 5px;
+}
+.map-container:after {
+	right: -5px;
+	top: 0;
+	bottom: 0;
+	width: 5px;
+}
+#map:before{
+	bottom: -5px;
+	left: 0;
+	right: 0;
+	height: 5px;
+}
+#map:after{
+	left: -5px;
+	top: 0;
+	bottom: 0;
+	width: 5px;
+}
+
+#map{
+	width: inherit;
+	height: inherit;
+	background-color: #CCC;
 }
