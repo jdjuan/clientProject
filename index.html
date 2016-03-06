@@ -10,6 +10,10 @@
 	<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />	
 	<!-- Boostrap Styles -->
 	<link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
+	<!-- Important Owl stylesheet -->
+	<link rel="stylesheet" href="owl-carousel/owl.carousel.css" type="text/css" >
+	<!-- Owl stylesheet Theme -->
+	<link rel="stylesheet" href="owl-carousel/owl.theme.css" type="text/css" >
 	<!-- Main Custom Styles -->
 	<link href="stylesheets/style.css" rel="stylesheet" type="text/css" />
 	<!-- [if IE]><link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /><![endif]-->
@@ -18,11 +22,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<!-- Latest compiled and minified Bootstrap JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- OWLCarousel js plugin -->
+	<script src="owl-carousel/owl.carousel.js"></script>
 	<!-- Custom Javascript -->
 	<script src="javascripts/main.js"></script>
 </head>
 <body>
-	<div class="section redBG" id="section1">
+	<div class="section firstType" id="section1">
 		<div class="sectionTop">
 			<img class="imageCenter" src="images/logo.png">
 			<h3 class="logoSubtitle">A team of self confessed geeks who are all about great digital design</h3>
@@ -31,7 +37,7 @@
 			<div class="scrollButton" role="section2"></div>
 		</div>
 	</div>
-	<div class="section lightGrayBG" id="section2">
+	<div class="section secondType" id="section2">
 		<div class="sectionTop">
 			<img class="drawing" src="images/drawing1.png">
 		</div>
@@ -40,7 +46,7 @@
 			<div class="scrollButton redButton" role="section3"></div>
 		</div>
 	</div>
-	<div class="section lightGrayBG" id="section3">
+	<div class="section secondType" id="section3">
 		<div class="sectionTop">
 			<img class="drawing" src="images/drawing2.png">
 		</div>
@@ -49,7 +55,7 @@
 			<div class="scrollButton redButton" role="section4"></div>
 		</div>
 	</div>
-	<div class="section lightGrayBG" id="section4">
+	<div class="section secondType" id="section4">
 		<div class="sectionTop">
 			<img class="drawing" src="images/drawing3.png">
 		</div>
@@ -58,7 +64,7 @@
 			<div class="scrollButton redButton" role="section5"></div>
 		</div>
 	</div>
-	<div class="section whiteBG" id="section5">
+	<div class="section thirdType" id="section5">
 		<div class="sectionTop">
 			<h1 class="titleWithMargin">Services</h1>
 			<div class="servicesContainer">
@@ -84,26 +90,14 @@
 			<div class="scrollButton blackButton" role="section6"></div>
 		</div>
 	</div>
-	<div class="section lightGrayBG" id="section6">
+	<div class="section fourthType" id="section6">
 		<div class="sectionTop">
 			<h1 class="titleWithMargin">Clients</h1>
-			<div class="servicesContainer">
-				<div class="col-md-3 serviceColumn">
-					<div class="circle service1"></div>
-					<h4 class="circleSubtitle">Web Development</h4>
-				</div>
-				<div class="col-md-3 serviceColumn">
-					<div class="circle service2"></div>
-					<h4 class="circleSubtitle">Design</h4>
-				</div>
-				<div class="col-md-3 serviceColumn">
-					<div class="circle service3"></div>
-					<h4 class="circleSubtitle">Branding</h4>
-				</div>
-				<div class="col-md-3 serviceColumn">
-					<div class="circle service4"></div>
-					<h4 class="circleSubtitle">UX Research</h4>
-				</div>
+			<div id="owl-example" class="owl-carousel">
+				<div class="client client1" onclick="window.open('http://thephotographersgallery.org.uk/', '_blank')"></div>
+				<div class="client client2" onclick="window.open('https://www.vegansociety.com/', '_blank')"></div>
+				<div class="client client3" onclick="window.open('https://www.pshe-association.org.uk/', '_blank')"></div>
+				<div class="client client4" onclick="window.open('https://www.vegansociety.com/', '_blank')"></div>
 			</div>
 		</div>
 		<div class="sectionBottom">

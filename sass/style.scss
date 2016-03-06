@@ -6,6 +6,7 @@
 
 * {
 	font-family: 'Raleway', sans-serif !important;
+	@include user-select(none);
 }
 
 .section{
@@ -13,7 +14,7 @@
 	
 }
 
-.redBG{
+.firstType{
 	@include section($red);
 	width: 100vw;
 	display:table-cell;
@@ -33,12 +34,12 @@
 	}
 }
 
-.lightGrayBG{
+.secondType{
 	@include section($lightGray);
 	.sectionTop{
-		display: inline-block;
+		// display: inline-block;
 		height: 75vh;
-		@include media("<=large"){
+		@include media("<=large")	{
 			height: 70vh;
 		}
 		@include media("<=medium"){
@@ -53,13 +54,20 @@
 	}
 }
 
-.whiteBG{
+.thirdType{
 	@include section($white);
 	.sectionTop{
 		height: 75vh;
 	}
 	.sectionBottom{
 		margin-top: 7rem;
+	}
+}
+
+.fourthType{
+	@include section($lightGray);
+	.sectionTop{
+		height: 75vh;
 	}
 }
 
@@ -127,6 +135,7 @@ strong{
 
 .scrollButton{
 	@include border-radius(25px);
+	@include ieCenterer();
 	background: url("../images/arrowDown.png") no-repeat center;
 	background-size: 35%;
 	width: 5rem;
@@ -135,8 +144,6 @@ strong{
 	border-width: 2px;
 	border-color: $lightGray;
 	cursor: pointer;
-	margin-left: auto;//ie
-	margin-right: auto;//ie
 	@include box-shadow($darkGray 1px 1px 20px -5px);
 	&:active{
 		@include box-shadow($darkGray 0px 0px 0px);
@@ -176,9 +183,8 @@ strong{
 }
 
 .servicesContainer{
+	@include ieCenterer();
 	width: 77vw;
-	margin-left: auto;//ie
-	margin-right: auto;//ie
 	@include media("<=993px"){
 		width: 90vw;
 	}
@@ -227,4 +233,68 @@ strong{
 		margin-left: 0.5rem;
 		@include font-style($darkGray, 1.7rem, 500);
 	}
+}
+.client{
+	@include filter(grayscale(100%) brightness(60%));
+	@include ieCenterer();
+	width: 18.5rem;
+	height: 18.5rem;
+	cursor: pointer;
+	&:hover{
+		@include filter(grayscale(0%) brightness(100%));
+	}
+}
+
+.client1{
+	background: url("../images/client1.png") no-repeat center/100%;
+	@include opacity(0.6);
+	&:hover{
+		@include opacity(1);
+	}
+}
+.client2{
+	background: url("../images/client2.png") no-repeat center/100%;
+}
+.client3{
+	background: url("../images/client3.png") no-repeat center/80%;
+}
+.client4{
+	background: url("../images/logo.png") no-repeat center/100%;
+}
+
+.owl-wrapper-outer{
+	z-index: 20;
+}
+.owl-buttons {
+	position: absolute !important;
+	top: 5.5rem !important;
+	width: 100%;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	@include media("<=large"){
+		padding-left: 1.5vw;
+		padding-right: 1.5vw;
+	}
+	@include media("<=medium"){
+		padding-left: 0vw;
+		padding-right: 0vw;
+	}
+	@include media("<=small"){
+		display: none;
+	}
+}
+
+.owl-prev {
+	font-size: 4rem !important;
+	font-weight: 600 !important;
+	color: gray !important;
+	background: none !important;
+	position: relative;
+	z-index: 40;
+	float: left;
+}
+
+.owl-next {
+	@extend .owl-prev;
+	float: right;
 }
