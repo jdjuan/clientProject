@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
 
+// Variables to quickly and easily change the accent colour across the site.
 $white: #FFF;
 $lightGray : #F1F2F2;
 $red : #D83454;
@@ -7,5 +8,4 @@ $darkGray : #434244;
 $gray : #CBCBCB;
 $fontSize : 5.5vw;
 $circlesColliding : 700px;
-
 $breakpoints: (very-small: 590px, small: 740px, circlesColliding: $circlesColliding, medium: 900px, large: 1100px);

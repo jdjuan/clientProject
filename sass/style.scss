@@ -11,7 +11,6 @@
 
 .section{
 	@include center-aligner();
-	
 }
 
 .firstType{
@@ -22,7 +21,6 @@
 		display: table-cell;
 		vertical-align: bottom;
 		height: 75vh;
-		
 	}
 	.sectionBottom{
 		margin-top: 10vh;
@@ -60,7 +58,6 @@
 	min-height: 50rem;
 	.sectionTop{
 		height: 75vh;
-		// min-height: 37.5rem;
 	}
 	.sectionBottom{
 		margin-top: 7rem;
@@ -69,7 +66,6 @@
 
 .fourthType{
 	@extend .thirdType;
-
 	@include section($lightGray);
 }
 

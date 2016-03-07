@@ -1,4 +1,5 @@
 $(function(){
+	// Android Keyboard changes the Viewport Heigh, there using this snippet is required
 	var _originalSize = $(window).width() + $(window).height()
 	$(window).resize(function(){
 		if($(window).width() + $(window).height() != _originalSize){
@@ -9,10 +10,12 @@ $(function(){
 		}
 	});
 
+	// Scroll Buttons assigned function
 	$(".scrollButton").click(function(event) {
 		animateScroll($(this).attr("role"));
 	});
 
+	// jQuery Function to make the actual scrolling
 	function animateScroll(elementClass){
 		$('html,body').animate({scrollTop: $("#"+elementClass).offset().top},
 			1000, function(){
@@ -22,6 +25,7 @@ $(function(){
 			});
 	}
 
+	// Clients carousel using external lib
 	$("#owl-example").owlCarousel({
 		items : 3,
 		// autoPlay : 2500,
@@ -35,6 +39,7 @@ $(function(){
 	});
 });
 
+// Google Maps initialization function
 function initMap() {
 	var myCenter=new google.maps.LatLng(51.524293, -0.073912);
 	var mapDiv = document.getElementById('map');
