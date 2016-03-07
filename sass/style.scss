@@ -7,10 +7,17 @@
 * {
 	font-family: 'Raleway', sans-serif !important;
 	@include user-select(none);
-	// Android Keyboard changes the Viewport Heigh, there using this snippet is required
-	// transition: height 999999s, width 999999s, 
-	// margin-left 999999s, margin-right 999999s,
-	// margin-top 999999s, margin-bottom 999999s;
+}
+
+// Android Keyboard changes the Viewport Heigh, therefore using this snippet is required
+.section, .sectionTop, .sectionBottom, .imageCenter, .logoSubtitle, .drawing, .redButton, .blackButton, .circle, .map-container{
+	transition: 
+	height 999999s, 
+	margin-top 999999s, 
+	width 999999s, 
+	margin-left 999999s, 
+	margin-right 999999s,
+	margin-bottom 999999s;
 }
 
 .section{
