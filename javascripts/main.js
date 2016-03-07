@@ -17,7 +17,7 @@ $(function(){
 	// Clients carousel using external lib
 	$("#owl-example").owlCarousel({
 		items : 3,
-		// autoPlay : 2500,
+		autoPlay : 2500,
 		navigation : true,
 		navigationText : ["<",">"],
 		rewindNav : true,
