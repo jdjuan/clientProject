@@ -22,6 +22,7 @@
 		display: table-cell;
 		vertical-align: bottom;
 		height: 75vh;
+		
 	}
 	.sectionBottom{
 		margin-top: 10vh;
@@ -56,8 +57,10 @@
 
 .thirdType{
 	@include section($white);
+	min-height: 50rem;
 	.sectionTop{
 		height: 75vh;
+		// min-height: 37.5rem;
 	}
 	.sectionBottom{
 		margin-top: 7rem;
@@ -66,6 +69,7 @@
 
 .fourthType{
 	@extend .thirdType;
+
 	@include section($lightGray);
 }
 
@@ -134,8 +138,7 @@ strong{
 .scrollButton{
 	@include border-radius(25px);
 	@include ieCenterer();
-	background: url("../images/arrowDown.png") no-repeat center;
-	background-size: 35%;
+	background: url("../images/arrowDown.png") no-repeat center/35%;
 	width: 5rem;
 	height: 5rem;
 	border-style: solid;
@@ -163,6 +166,7 @@ strong{
 }
 
 .blackButton{
+	background: url("../images/arrowDownBlack.png") no-repeat center/35%;
 	border-color: $darkGray;
 	border-width: 2.5px;
 	width: 4.8rem;
@@ -171,7 +175,7 @@ strong{
 }
 
 .titleWithMargin{
-	@include font-style($darkGray, 6.3rem, 400);
+	@include font-style($darkGray, 9.7vh, 400);
 	margin-top: 0;
 	padding-top: 4rem;
 	margin-bottom: 10.5rem;
@@ -179,6 +183,14 @@ strong{
 		margin-bottom: 3rem;
 	}
 }
+
+.titleWithMargin.clients{
+	@extend .titleWithMargin;
+	@include media("<=circlesColliding"){
+		margin-bottom: 10.5rem;
+	}
+}
+
 .titleWithoutMargin{
 	@extend .titleWithMargin;
 	margin-bottom: 3rem;
@@ -350,4 +362,26 @@ strong{
 	width: inherit;
 	height: inherit;
 	background-color: #CCC;
+}
+
+.inputText, .inputTextArea{
+	@include formSize();
+	border: solid 2px darken($lightGray,15%);
+	background-color: darken($white,1%);
+	@include font-style($darkGray, 2rem, 500);
+	@include input-placeholder {
+		@include font-style($gray, 2rem, 400);
+	}
+}
+
+input:focus {
+	text-decoration: none !important;
+}
+
+.submitButton{
+	@include font-style($lightGray, 2rem, 400);
+	@include border-radius(5px);
+	@include formSize();
+	background-color: $red;
+	border: none;
 }

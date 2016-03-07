@@ -25,6 +25,8 @@
 	<!-- OWLCarousel js plugin -->
 	<script src="owl-carousel/owl.carousel.js"></script>
 	<!-- Custom Javascript -->
+	<script src="javascripts/hammer.min.js"></script>
+	<!-- Custom Javascript -->
 	<script src="javascripts/main.js"></script>
 	<!-- Google Maps API -->
 	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
@@ -94,7 +96,7 @@
 	</div>
 	<div class="section fourthType" id="section6">
 		<div class="sectionTop">
-			<h1 class="titleWithMargin">Clients</h1>
+			<h1 class="titleWithMargin clients">Clients</h1>
 			<div id="owl-example" class="owl-carousel">
 				<div class="client client1" onclick="window.open('http://thephotographersgallery.org.uk/', '_blank')"></div>
 				<div class="client client2" onclick="window.open('https://www.vegansociety.com/', '_blank')"></div>
@@ -115,6 +117,26 @@
 		</div>
 		<div class="sectionBottom">
 			<div class="scrollButton redButton" role="section8"></div>
+		</div>
+	</div>
+	<div class="section fourthType" id="section8">
+		<div class="sectionTop">
+			<h1 class="titleWithoutMargin">Contact</h1>
+			<form>
+				<fieldset class="form-group">
+					<input type="text" class="form-control inputText" name="name" placeholder="Name">
+				</fieldset>
+				<fieldset class="form-group">
+					<input type="text" class="form-control inputText" name="email" placeholder="Email">
+				</fieldset>
+				<fieldset class="form-group">
+					<textarea type="text" class="form-control inputTextArea" name="message" rows="5" placeholder="Message"></textarea>
+				</fieldset>
+				<input type="submit" class="submitButton" value="Send Message!"></input>
+			</form>
+		</div>
+		<div class="sectionBottom">
+			<h4 class="circleSubtitle">Or phone on: 01923 220121</h4>
 		</div>
 	</div>
 </body>

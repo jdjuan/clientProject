@@ -1,11 +1,26 @@
 $(function(){
-	$(".scrollButton").click(function(event) {
-		scrolling=true;
-		$('html,body').animate({scrollTop: $("#"+$(this).attr("role")).offset().top},
-			1000, function(){
-				scrolling=false;
-			});
+	var _originalSize = $(window).width() + $(window).height()
+	$(window).resize(function(){
+		if($(window).width() + $(window).height() != _originalSize){
+			$( ".circleSubtitle" ).hide();
+		}else{
+			$( ".circleSubtitle" ).show();
+			$('html,body').scrollTop($(document).height());
+		}
 	});
+
+	$(".scrollButton").click(function(event) {
+		animateScroll($(this).attr("role"));
+	});
+
+	function animateScroll(elementClass){
+		$('html,body').animate({scrollTop: $("#"+elementClass).offset().top},
+			1000, function(){
+				setTimeout(function(){
+					scrolling=false;
+				}, 50);
+			});
+	}
 
 	$("#owl-example").owlCarousel({
 		items : 3,
