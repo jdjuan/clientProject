@@ -1,12 +1,15 @@
 $(function(){
 	// Android Keyboard changes the Viewport Heigh, there using this snippet is required
 	var _originalSize = $(window).width() + $(window).height()
+	var section7scroll = $("#section2").offset().top;
 	$(window).resize(function(){
-		if($(window).width() + $(window).height() != _originalSize){
-			$( ".circleSubtitle" ).hide();
-		}else{
-			$( ".circleSubtitle" ).show();
-			$('html,body').scrollTop($(document).height());
+		if ($(document).scrollTop() > section7scroll) {
+			if($(window).width() + $(window).height() != _originalSize){
+				$( ".circleSubtitle" ).hide();
+			}else{
+				$( ".circleSubtitle" ).show();
+				$('html,body').scrollTop($(document).height());
+			}
 		}
 	});
 
