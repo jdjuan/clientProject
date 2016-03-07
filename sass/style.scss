@@ -9,37 +9,34 @@
 	@include user-select(none);
 }
 
-// Android Keyboard changes the Viewport Heigh, therefore using this snippet is required
-.section, .sectionTop, .sectionBottom, .imageCenter, .logoSubtitle, .drawing, .redButton, .blackButton, .circle, .map-container{
-	transition: 
-	height 999999s, 
-	margin-top 999999s, 
-	width 999999s, 
-	margin-left 999999s, 
-	margin-right 999999s,
-	margin-bottom 999999s;
+// Android Keyboard and Android NavBar change the Viewport Heigh, therefore using this snippet is required
+.section, .sectionTop{
+	transition: height 999999s
 }
 
 .section{
 	@include center-aligner();
 }
 
+.sectionTop{
+	height: 72vh; 
+}
+
 .firstType{
 	@include section($red);
-	width: 100vw;
 	display:table-cell;
-	.sectionTop{
+	width: 100vw;
+	.sectionTop{	
 		display: table-cell;
 		vertical-align: bottom;
-		height: 75vh;
 	}
 	.sectionBottom{
-		margin-top: 10vh;
+		margin-top: 6.5rem;
 		@include media("<=medium"){
-			margin-top: 8vh;
+			margin-top: 3.5rem;
 		}
 		@include media("<=small"){
-			margin-top: 6vh;
+			margin-top: 2.5rem;
 		}
 	}
 }
@@ -47,19 +44,14 @@
 .secondType{
 	@include section($lightGray);
 	.sectionTop{
-		// display: inline-block;
-		height: 75vh;
-		@include media("<=large")	{
-			height: 70vh;
-		}
-		@include media("<=medium"){
-			height: 65vh;
-		}
-		@include media("<=small"){
-			height: 60vh;
-		}
 		@include media("<=very-small"){
-			height: 55vh;
+			height: 65vh
+		}
+	}
+	.sectionBottom{
+		margin-top: 1rem;
+		@include media("<=medium"){
+			margin-top: 0rem;
 		}
 	}
 }
@@ -67,9 +59,6 @@
 .thirdType{
 	@include section($white);
 	min-height: 50rem;
-	.sectionTop{
-		height: 75vh;
-	}
 	.sectionBottom{
 		margin-top: 7rem;
 	}
@@ -81,14 +70,14 @@
 }
 
 .imageCenter{
-	width: 40vh;
+	width: 26rem;
 }
 
 .logoSubtitle{
 	@include font-style($lightGray, 2rem, 400);
 	letter-spacing: 1px;
 	line-height: 128%;
-	margin-top: 10vh;
+	margin-top: 6rem;
 	margin-left: 30vw;
 	margin-right: 30vw;
 	@include media("<=large"){
@@ -110,23 +99,20 @@
 }
 
 .drawing{
-	width: 75vh;
-	margin-top: 9vw;
-	@include media("<=large","portrait"){
-		width: 35vh;
-		margin-top: 11vw;
+	width: 48rem;
+	margin-top: 13rem;
+	@include media("<=medium"){
+		width: 44rem;
 	}
-	@include media("<=medium","portrait"){
-		width: 40vh;
-		margin-top: 13vw;
+	@include media("<=small"){
+		width: 38rem;
+		margin-top: 16rem;
 	}
-	@include media("<=small","portrait"){
-		width: 60vh;
-		margin-top: 15vw;
+	@include media("<=very-small"){
+		width: 32rem;
 	}
-	@include media("<=very-small","portrait"){
-		width: 40vh;
-		margin-top: 17vw;
+	@include media("<=480px"){
+		width: 28rem;
 	}
 }
 
@@ -135,6 +121,7 @@
 	letter-spacing: 0.4px;
 	margin-left: 10vw;
 	margin-right: 10vw;
+	margin-top: 0;
 }
 
 strong{
@@ -163,13 +150,7 @@ strong{
 	border-width: 3px;
 	width: 4.8rem;
 	height: 4.8rem;
-	margin-top: 5vh;
-	@include media("<=medium"){
-		margin-top: 6vh;
-	}
-	@include media("<=small"){
-		margin-top: 11vh;
-	}
+	margin-top: 3.1rem;
 }
 
 .blackButton{
@@ -178,7 +159,6 @@ strong{
 	border-width: 2.5px;
 	width: 4.8rem;
 	height: 4.8rem;
-	margin-top: 5vh;
 }
 
 .titleWithMargin{
@@ -215,13 +195,13 @@ strong{
 }
 
 .circle{
-	@include border-radius(25vh);
+	@include border-radius(20rem);
 	width: 14vw;
 	height: 14vw;
 	@include media("<=circlesColliding"){
-		width: 12vh;
-		height: 12vh;
-		display: inline-block;
+		width: 7.5rem;
+		height: 7.5rem;
+		display: inline-block;	
 		vertical-align: middle;
 		margin-bottom: 2rem;
 	}
@@ -331,7 +311,7 @@ strong{
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 55vh;
+	height: 85%;
 }
 .map-container:before, .map-container:after, #map:before, #map:after {
 	position: absolute;
