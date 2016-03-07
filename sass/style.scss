@@ -362,6 +362,7 @@ strong{
 
 .inputText, .inputTextArea{
 	@include formSize();
+	@include ieCenterer();
 	border: solid 2px darken($lightGray,15%);
 	background-color: darken($white,1%);
 	@include font-style($darkGray, 2rem, 500);

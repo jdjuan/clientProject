@@ -51,7 +51,7 @@ function initMap() {
 
 	var marker=new google.maps.Marker({
 		position:myCenter,
-		icon:'../images/marker.png'
+		icon:'images/marker.png'
 	});
 	marker.setMap(map);
 	var infowindow = new google.maps.InfoWindow({
